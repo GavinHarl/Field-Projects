@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: manuale-semibold
+font link: https://fonts.google.com/specimen/Manuale
+font author: Omnibus Type
+font author site: http://www.omnibus-type.com/
+Slogan Font: Fanwood Text.otf
+
+icon designer: Randall Barriga
+icon designer link: /randy
+        
+{"bg":"#E4F3EB","icon-gradient-0":"#085B20","icon-gradient-1":"#41E296","font":"#0D3721","slogan":"#214b35"}
+      
