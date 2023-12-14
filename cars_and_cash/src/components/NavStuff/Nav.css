@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+nav{
+    background-color: rgba(223, 255, 223, 0.551);
+    margin: 1%;
+    padding: 5px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75%;
+    margin: 0px 2px 2px 2px;
+}
+
+button{
+    position: relative;
+    border: none;
+    font-size: 18px;
+    transition: color 0.5s, transform 0.2s, background-color 0.2s;
+    outline: none;
+    border-radius: 3px;
+    margin: 0 10px;
+    padding: 13px 23px;
+    border: 3px solid transparent;
+    text-align: center;
+
+    &::active{
+      transform: translateY(2px);
+    }
+
+    &::after, &::before{
+      border-radius: 3px;
+    }  
+}
+
+.button{
+    background-color: transparent;
+    color: rgb(0, 91, 20);
+
+    &:hover{
+        box-shadow: none;
+        color: rgb(0, 255, 60);
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 3px solid rgba(0, 0, 150, 0);
+        transition: opacity 0.3s, border 0.3s;
+    }
+
+    &:hover::before{
+        opacity: 0;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: 3px solid rgb(0, 255, 60);
+        opacity: 0;
+        z-index: -1;
+        transform: scaleX(1.1) scaleY(1.3);
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    &:hover::after{
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+
+/* a{text-decoration: none; color: black;} */
