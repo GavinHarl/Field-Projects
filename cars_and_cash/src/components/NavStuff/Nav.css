@@ -27,18 +27,24 @@ button{
     border: 3px solid transparent;
     text-align: center;
 
-    &::active{
+    /* &::active{
       transform: translateY(2px);
-    }
+    } */
 
     &::after, &::before{
       border-radius: 3px;
     }  
 }
 
-.button{
+.button:hover{
+    background-color: azure;
+
+}
+
+.button a{
     background-color: transparent;
     color: rgb(0, 91, 20);
+    text-decoration: none;
 
     &:hover{
         box-shadow: none;
