@@ -1,23 +1,24 @@
-"use client";
+'use client';
 import React, { useState, useEffect } from "react";
-import VehicleCards from "../doohickeys/VehicleCards.tsx";
+import VehicleCards from "../VehicleStuff/VehicleCards.tsx";
+import "../VehicleStuff/Vehicles.css";
 
 interface aVehicle {
-    Pictures: [];
-    Make: string;
-    Model: string;
-    Year: string;
-    Price: string;
-    Engine: string;
-    Transmission: string;
-    MPG: string;
-    Usage: string;
-    Miles: string;
-    Drive: string;
-    InteriorColor: string;
-    ExteriorColor: string;
-    StockNumber: string;
-    Description: string;
+  Pictures: string[];
+  Make: string;
+  Model: string;
+  Year: string;
+  Price: string;
+  Engine: string;
+  Transmission: string;
+  MPG: string;
+  Usage: string;
+  Miles: string;
+  Drive: string;
+  InteriorColor: string;
+  ExteriorColor: string;
+  StockNumber: string;
+  Description: string;
 }
 
 function Vehicles() {
@@ -29,7 +30,7 @@ function Vehicles() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("something-for-now.yuh");
+      const response = await fetch("/VehicleAPI.json");
 
       if (response.ok) {
         const theData: aVehicle[] = await response.json();
@@ -39,38 +40,37 @@ function Vehicles() {
       }
 
     } catch (error) {
+      console.log(error);
       return (
-        <div>
+        <div className="error">
           <h2>Sorry, we encountered an error.</h2>
         </div>
       );
-    }
+    };
   };
 
   return (
-    <>
-      <div className="body">
-        {data.map((aVehicle) => (
-          <VehicleCards 
-            pics={aVehicle.Pictures}
-            make={aVehicle.Make}
-            model={aVehicle.Model}
-            year={aVehicle.Year}
-            price={aVehicle.Price}
-            engine={aVehicle.Engine}
-            transmission={aVehicle.Transmission}
-            mpg={aVehicle.MPG}
-            usage={aVehicle.Usage}
-            miles={aVehicle.Miles}
-            drive={aVehicle.Drive}
-            intColor={aVehicle.InteriorColor}
-            extColor={aVehicle.ExteriorColor}
-            stockNum={aVehicle.StockNumber}
-            desc={aVehicle.Description}
-          />
-        ))}
-      </div>
-    </>
+    <div className="body">
+      {data.map((aVehicle) => (
+        <VehicleCards 
+          pics={aVehicle.Pictures}
+          make={aVehicle.Make}
+          model={aVehicle.Model}
+          year={aVehicle.Year}
+          price={aVehicle.Price}
+          engine={aVehicle.Engine}
+          transmission={aVehicle.Transmission}
+          mpg={aVehicle.MPG}
+          usage={aVehicle.Usage}
+          miles={aVehicle.Miles}
+          drive={aVehicle.Drive}
+          intColor={aVehicle.InteriorColor}
+          extColor={aVehicle.ExteriorColor}
+          stockNum={aVehicle.StockNumber}
+          desc={aVehicle.Description}
+        />
+      ))}
+    </div>
   );
 }
 

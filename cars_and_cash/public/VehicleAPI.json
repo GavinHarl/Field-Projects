@@ -1,0 +1,36 @@
+[
+    {
+        "Pictures": ["https://en.wikipedia.org/wiki/File:McDonald%27s_Quarter_Pounder_with_Cheese,_United_States.jpg"],
+        "Make": "Chevrolet",
+        "Model": "Cobalt",
+        "Year": "2010",
+        "Price": "1000",
+        "Engine": "2.2",
+        "Transmission": "Automatic",
+        "MPG": "30",
+        "Usage": "Used",
+        "Miles": "190000",
+        "Drive": "Front wheel",
+        "InteriorColor": "Black",
+        "ExteriorColor": "Red",
+        "StockNumber": "12345",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet gravida sem. Integer lacinia imperdiet ante, eu molestie velit rutrum at. Ut molestie aliquam velit quis placerat. Sed iaculis libero sed luctus facilisis. Morbi lorem diam, pharetra vitae molestie a, euismod sit amet lorem. Donec vel interdum est. Integer sed hendrerit nunc. Sed consequat, nunc sit amet faucibus iaculis, dolor massa ullamcorper ipsum, nec vestibulum ligula libero eget mi. Praesent accumsan leo iaculis ipsum fermentum laoreet. Nullam tristique tempor purus, at elementum arcu. Pellentesque vel aliquet tortor. Suspendisse ut orci ac nulla viverra volutpat."
+    },
+    {
+        "Pictures": ["https://en.wikipedia.org/wiki/File:McDonald%27s_Quarter_Pounder_with_Cheese,_United_States.jpg"],
+        "Make": "Ford",
+        "Model": "Escape",
+        "Year": "2010",
+        "Price": "2000",
+        "Engine": "2.5",
+        "Transmission": "Automatic",
+        "MPG": "23",
+        "Usage": "Used",
+        "Miles": "200000",
+        "Drive": "Front wheel",
+        "InteriorColor": "Black",
+        "ExteriorColor": "Silver",
+        "StockNumber": "54321",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet gravida sem. Integer lacinia imperdiet ante, eu molestie velit rutrum at. Ut molestie aliquam velit quis placerat. Sed iaculis libero sed luctus facilisis. Morbi lorem diam, pharetra vitae molestie a, euismod sit amet lorem. Donec vel interdum est. Integer sed hendrerit nunc. Sed consequat, nunc sit amet faucibus iaculis, dolor massa ullamcorper ipsum, nec vestibulum ligula libero eget mi. Praesent accumsan leo iaculis ipsum fermentum laoreet. Nullam tristique tempor purus, at elementum arcu. Pellentesque vel aliquet tortor. Suspendisse ut orci ac nulla viverra volutpat."
+    }
+]

@@ -1,9 +1,11 @@
+'use client';
 import React from "react";
 import VehiclePictures from "./VehiclePicture.tsx";
 import VehicleBody from "./VehicleBody.tsx"
+import "./Vehicles.css";
 
 interface Props {
-  pics: string;
+  pics: string[];
   make: string;
   model: string;
   year: string;

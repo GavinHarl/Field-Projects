@@ -3,7 +3,7 @@
 function HomePage() {
   return (
     <>
-      <p>Hello World!</p>
+      <p>Welcome to Cars and Cash!</p>
     </>
   );
 }
