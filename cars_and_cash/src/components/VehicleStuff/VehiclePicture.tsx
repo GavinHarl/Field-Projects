@@ -35,10 +35,10 @@ function VehiclePictures(props: Props) {
       {images.length > 0 && (
         <img src={images[currentImageIndex]} alt="Vehicles" onClick={imageBlowup} id="currentImage"/>
       )}
-      <button className="arrow-left" onClick={previousImage}>
+      <button className="arrow-button arrow-left" onClick={previousImage}>
         &lt;
       </button>
-      <button className="arrow-right" onClick={nextImage}>
+      <button className="arrow-button arrow-right" onClick={nextImage}>
         &gt;
       </button>
     </div>
