@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Vehicles.css";
 
 interface Props {
@@ -11,14 +11,21 @@ function VehiclePictures(props: Props) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const img = document.getElementById("currentImage");
+  const exitBttn = document.getElementById("exit");
+  
   const imageBlowup = () => {
     img.style.transform = "scale(1.5)";
     img.style.transition = "transform 0.25s ease";
-  }
+
+    exitBttn.hidden = false;
+  };
+
   const imageReset = () => {
     img.style.transform = "scale(1)";
     img.style.transition = "transform 0.25s ease";
-  }
+
+    exitBttn.hidden = true;
+  };
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -33,8 +40,11 @@ function VehiclePictures(props: Props) {
   return (
     <div className="image-slider">
       {images.length > 0 && (
-        <img src={images[currentImageIndex]} alt="Vehicles" onClick={imageBlowup} id="currentImage"/>
+        <img src={images[currentImageIndex]} alt="Vehicles" id="currentImage" onClick={imageBlowup}/>
       )}
+      <button id="exit" onClick={imageReset} hidden={true}>
+        &#10060;
+      </button>
       <button className="arrow-button arrow-left" onClick={previousImage}>
         &lt;
       </button>

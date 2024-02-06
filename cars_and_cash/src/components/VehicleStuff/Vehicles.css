@@ -6,6 +6,14 @@
     padding: 2%;
 }
 
+.error{
+    text-align: center;
+    font-size: larger;
+    background-color: rgba(223, 255, 223, 0.551);
+    border: solid #666666;
+    border-radius: 15px;
+}
+
 .vehicleCard{
     max-width: 900px;
     min-width: 400px;
@@ -36,6 +44,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding-right: 5px;
 }
 .image-slider img{
     width: 100%;
@@ -47,21 +56,33 @@
 .arrow-button{
     width: 40px;
     height: 40px;
-    background-color: transparent;
-    color: #363636;
+    background-color: #68686856;
+    color: #000000;
     border: none;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
 }
 .arrow-button:hover{
-    color: #AAAAAA;
+    color: #ffffff;
+    background-color: #a4a4a451;
 }
 .arrow-left{
     left: 0px;
 }
 .arrow-right{
     right: 0px;
+}
+
+#exit{
+    background-color: #68686856;
+}
+#exit:hover{
+    cursor: pointer;
+    background-color: #a4a4a451;
 }

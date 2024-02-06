@@ -1,11 +1,13 @@
-
+import React from "react";
+import Map from "../Others/Map";
 
 function AboutPage() {
-  return (
+
+  return(
     <>
-      <p>About us</p>
+      <Map/>
     </>
-  );
+  )
 }
 
 export default AboutPage;

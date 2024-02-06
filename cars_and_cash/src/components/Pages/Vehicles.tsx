@@ -4,6 +4,7 @@ import VehicleCards from "../VehicleStuff/VehicleCards.tsx";
 import "../VehicleStuff/Vehicles.css";
 
 interface aVehicle {
+  ID: number;
   Pictures: string[];
   Make: string;
   Model: string;
@@ -49,25 +50,36 @@ function Vehicles() {
     };
   };
 
+  const [enlargedCard, setEnlargedCard] = useState(null);
+  const handleCardClick = (id) => {
+    setEnlargedCard(id === enlargedCard ? null : id);
+  };
+
   return (
     <div className="body">
       {data.map((aVehicle) => (
         <VehicleCards 
-          pics={aVehicle.Pictures}
-          make={aVehicle.Make}
-          model={aVehicle.Model}
-          year={aVehicle.Year}
-          price={aVehicle.Price}
-          engine={aVehicle.Engine}
-          transmission={aVehicle.Transmission}
-          mpg={aVehicle.MPG}
-          usage={aVehicle.Usage}
-          miles={aVehicle.Miles}
-          drive={aVehicle.Drive}
-          intColor={aVehicle.InteriorColor}
-          extColor={aVehicle.ExteriorColor}
-          stockNum={aVehicle.StockNumber}
-          desc={aVehicle.Description}
+          key={aVehicle.ID}
+          item={aVehicle}
+          isEnlarged={aVehicle.ID === enlargedCard}
+          onClick={() => handleCardClick(aVehicle.ID)}
+
+          // Previous prop passing
+          // pics={aVehicle.Pictures}
+          // make={aVehicle.Make}
+          // model={aVehicle.Model}
+          // year={aVehicle.Year}
+          // price={aVehicle.Price}
+          // engine={aVehicle.Engine}
+          // transmission={aVehicle.Transmission}
+          // mpg={aVehicle.MPG}
+          // usage={aVehicle.Usage}
+          // miles={aVehicle.Miles}
+          // drive={aVehicle.Drive}
+          // intColor={aVehicle.InteriorColor}
+          // extColor={aVehicle.ExteriorColor}
+          // stockNum={aVehicle.StockNumber}
+          // desc={aVehicle.Description}
         />
       ))}
     </div>

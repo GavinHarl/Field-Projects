@@ -4,43 +4,26 @@ import VehiclePictures from "./VehiclePicture.tsx";
 import VehicleBody from "./VehicleBody.tsx"
 import "./Vehicles.css";
 
-interface Props {
-  pics: string[];
-  make: string;
-  model: string;
-  year: string;
-  price: string;
-  engine: string;
-  transmission: string;
-  mpg: string;
-  usage: string;
-  miles: string;
-  drive: string;
-  intColor: string;
-  extColor: string;
-  stockNum: string;
-  desc: string;
-}
 
-function VehicleCards(props: Props) {
+const VehicleCards = ({item, isEnlarged, clicked}) => {
   return (
-    <div className="vehicleCard">
-      <VehiclePictures pics={props.pics}/>
+    <div className="vehicleCard" onClick={clicked}>
+      <VehiclePictures pics={item.pics}/>
       <VehicleBody 
-        make={props.make}
-        model={props.model}
-        year={props.year}
-        price={props.price}
-        engine={props.engine}
-        transmission={props.transmission}
-        mpg={props.mpg}
-        usage={props.usage}
-        miles={props.miles}
-        drive={props.drive}
-        intColor={props.intColor}
-        extColor={props.extColor}
-        stockNum={props.stockNum}
-        desc={props.desc}
+        make={item.make}
+        model={item.model}
+        year={item.year}
+        price={item.price}
+        engine={item.engine}
+        transmission={item.transmission}
+        mpg={item.mpg}
+        usage={item.usage}
+        miles={item.miles}
+        drive={item.drive}
+        intColor={item.intColor}
+        extColor={item.extColor}
+        stockNum={item.stockNum}
+        desc={item.desc}
       />
     </div>
   );

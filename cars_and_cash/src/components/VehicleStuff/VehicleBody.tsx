@@ -22,12 +22,8 @@ interface Props {
 
 function VehicleBody(props: Props) {
 
-  const showDetail = () => {
-    console.log("clicked");
-  }
-
   return (
-    <div className="cardBody" onClick={showDetail}>
+    <div className="cardBody">
       <h1>{props.year} {props.make} {props.model}</h1>
       <h2><PatternFormat format="$#,##0" value={props.price} displayType="text"/></h2>
       <p>{props.usage} - <PatternFormat format="###,##0" value={props.miles} displayType="text"/> mi.</p>
