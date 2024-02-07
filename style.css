@@ -1,18 +1,28 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #d0f8ce; /* Light green background color */
 }
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff; /* Change this to your desired background color */
-    padding: 10px;
+    background: url('images/dollar sign background.jpg');
+    background-size: cover;
+    padding: 0px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    margin: 0; /* Remove margin */
+    
 }
 
 .logo img {
-    height: 100px; /* Adjust the height of your logo */
+    height: 100px;
 }
 
 .nav-links {
@@ -23,11 +33,123 @@ body {
 }
 
 .nav-links a {
-    color: black; /* Change this to your desired text color */
+    color: black;
     text-decoration: none;
     font-size: 16px;
+    transition: color 0.3s; /* Smooth transition for color changes */
 }
 
 .nav-links a:hover {
-    color: lime; /* Change this to your desired hover text color */
+    color: lime;
+}
+
+#schedule {
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
+
+h2 {
+    color: #333333; /* Darken the heading color */
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.about-us {
+    padding: 20px;
+}
+
+.phone,
+.email {
+    display: block;
+}
+
+p {
+    line-height: 1.6; /* Improve readability with increased line height */
+}
+
+a {
+    color: #007BFF; /* Set link color */
+    text-decoration: none;
+    font-weight: bold; /* Make links bold */
+}
+
+a:hover {
+    color: #0056b3; /* Change link color on hover */
+}
+
+footer{
+    background: url('images/dollar sign background.jpg');
+    background-size: cover;
+}
+
+.more {
+    text-align: center;
+    padding: 20px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.info-box {
+    display: inline-block;
+    width: 200px; /* Set the width of the boxes */
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #ffffff; /* Set the background color to white */
+}
+
+.info-box img {
+    max-width: 100%;
+    max-height: 100%; /* Ensure the image does not exceed the box height */
+}
+
+.info-box h3 {
+    margin-top: 10px;
+}
+
+.info-box:hover {
+    background-color: #f5f5f5;
+}
+
+footer {
+    background-color: #ffffff; /* Light green background color for the footer */
+    padding: 10px;
+}
+
+footer h3 {
+    margin: 0;
+}
+
+.phone-foot,
+.email-foot {
+    display: inline-block;
+    margin: 10px;
+}
+
+.phone-foot h4,
+.email-foot h4 {
+    margin-bottom: 5px;
+}
+
+.phone-foot p,
+.email-foot p {
+    margin: 0;
+}
+
+footer a {
+    color: #007BFF;
+}
+
+footer a:hover {
+    color: #0056b3;
 }
